@@ -10,6 +10,9 @@ class Comment extends Model {
   static get primaryKey() {
     return 'id';
   }
+  static get hidden() {
+    return ['posts_id'];
+  }
 }
 
 module.exports = Comment;
