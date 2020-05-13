@@ -17,8 +17,9 @@
 const Route = use('Route');
 
 Route.on('/').render('welcome');
-Route.get('/users', 'UserController.getUsersList');
-Route.get('/users/:user_id', 'UserController.getUser');
-Route.post('/users', 'UserController.postUser');
-Route.put('/users/:user_id', 'UserController.putUser');
-Route.get('/posts', 'PostController.getPosts');
+Route.get('/users', 'UserController.getUsersList'); // BBDD no relacional
+Route.get('/users/:user_id', 'UserController.getUser'); // BBDD no relacional
+Route.post('/users', 'UserController.postUser'); // BBDD no relacional
+Route.put('/users/:user_id', 'UserController.putUser'); // BBDD no relacional
+Route.get('/posts', 'PostController.getPosts'); // BBDD relacional
+Route.get('/posts/:post_id', 'PostController.getPostDetail'); // BBDD relacional
